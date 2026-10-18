@@ -1,8 +1,133 @@
 @use "tailwindcss";
 
-/* Global styles */
-html, body {
-  height: 100%;
+@config "../tailwind.config.js";
+
+/* Tailwind CSS v4 Theme Overrides */
+@theme {
+  --color-background: #FDF8F7;
+  --color-theme-bg: #FDF8F7;
+  --color-primary-rose: #E8C5C8;
+  --color-primary-blush: #E8C5C8;
+  --color-rose-blush: #E8C5C8;
+  --color-blush: #E8C5C8;
+  --color-warm-taupe: #8C7A6B;
+  --color-taupe-accent: #8C7A6B;
+  --color-charcoal-text: #2D2B2A;
+  --color-charcoal: #2D2B2A;
+
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Base styles & typography defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
   margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  min-height: 100vh;
+  background-color: #FDF8F7;
+  color: #2D2B2A;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Playfair Display for Headings */
+h1, h2, h3, h4, h5, h6, .font-heading, .font-serif, .font-display {
+  font-family: 'Playfair Display', Georgia, serif;
+  letter-spacing: -0.015em;
+}
+
+/* ==========================================================================
+   Glassmorphism Container Classes
+   ========================================================================== */
+
+.glass-container,
+.glass-panel,
+.glass-card {
+  background: rgba(253, 248, 247, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(232, 197, 200, 0.45);
+  box-shadow: 0 8px 32px 0 rgba(140, 122, 107, 0.08);
+}
+
+.glass-card-blush {
+  background: rgba(232, 197, 200, 0.28);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(232, 197, 200, 0.6);
+  box-shadow: 0 8px 28px 0 rgba(140, 122, 107, 0.1);
+}
+
+.glass-card-taupe {
+  background: rgba(140, 122, 107, 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(140, 122, 107, 0.22);
+  box-shadow: 0 8px 30px 0 rgba(45, 43, 42, 0.05);
+}
+
+.glass-pill {
+  background: rgba(253, 248, 247, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(232, 197, 200, 0.5);
+  box-shadow: 0 2px 10px 0 rgba(140, 122, 107, 0.06);
+}
+
+.glass-header {
+  background: rgba(253, 248, 247, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(232, 197, 200, 0.5);
+}
+
+/* ==========================================================================
+   Smooth Hover Card-Lift Transitions
+   ========================================================================== */
+
+.card-lift {
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+              box-shadow 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+              border-color 0.35s ease;
+  will-change: transform, box-shadow;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 36px -10px rgba(140, 122, 107, 0.22),
+                0 0 0 1px rgba(232, 197, 200, 0.7);
+  }
+}
+
+.card-lift-sm {
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1),
+              box-shadow 0.25s cubic-bezier(0.2, 0.8, 0.2, 1),
+              border-color 0.25s ease;
+  will-change: transform, box-shadow;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px -6px rgba(140, 122, 107, 0.16),
+                0 0 0 1px rgba(232, 197, 200, 0.5);
+  }
+}
+
+.card-lift-scale {
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+              box-shadow 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+              border-color 0.35s ease;
+  will-change: transform, box-shadow;
+
+  &:hover {
+    transform: translateY(-5px) scale(1.015);
+    box-shadow: 0 22px 42px -12px rgba(140, 122, 107, 0.25),
+                0 0 0 1px rgba(232, 197, 200, 0.7);
+  }
 }

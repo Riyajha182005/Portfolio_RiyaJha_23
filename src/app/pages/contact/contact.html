@@ -1,81 +1,93 @@
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
   <!-- Header -->
   <div class="text-center mb-16">
-    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-medium mb-4">
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-pill text-taupe text-xs font-semibold uppercase tracking-wider mb-4">
       Get in Touch
     </div>
-    <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
-      Contact <span class="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">Me</span>
+    <h1 class="text-4xl sm:text-5xl font-serif font-bold text-charcoal tracking-tight mb-4">
+      Let's <span class="italic font-normal text-taupe">Connect</span>
     </h1>
-    <p class="text-slate-400 max-w-xl mx-auto text-base">
-      Have a project in mind, an opportunity to discuss, or just want to say hi? Send me a message!
+    <p class="text-taupe max-w-xl mx-auto text-base font-sans">
+      Interested in collaborating, hiring for internships, or discussing Generative AI systems? Drop a message below.
     </p>
   </div>
 
-  <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 max-w-5xl mx-auto">
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 max-w-5xl mx-auto">
     <!-- Contact Info Column -->
-    <div class="lg:col-span-5 space-y-8">
-      <div class="p-8 rounded-3xl bg-slate-900/60 border border-slate-800 space-y-6">
-        <h2 class="text-xl font-bold text-white">Contact Details</h2>
-        <p class="text-sm text-slate-400 leading-relaxed">
-          I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+    <div class="lg:col-span-5 space-y-6">
+      <div class="p-8 rounded-3xl glass-card card-lift space-y-6">
+        <h2 class="text-2xl font-serif font-bold text-charcoal">Direct Contact</h2>
+        <p class="text-sm text-taupe leading-relaxed">
+          Open to engineering internships, software development roles, and research collaborations.
         </p>
 
-        <div class="space-y-4">
+        <div class="space-y-5">
+          <!-- Email -->
           <div class="flex items-start gap-4">
-            <div class="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center shrink-0">
+            <div class="w-11 h-11 rounded-2xl bg-rose-blush/50 text-charcoal flex items-center justify-center shrink-0">
               <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
             </div>
             <div>
-              <div class="text-xs text-slate-500 uppercase tracking-wider font-semibold">Email</div>
-              <a href="mailto:contact@example.com" class="text-sm text-slate-200 hover:text-indigo-400 transition-colors">
-                contact&#64;example.com
+              <div class="text-xs text-taupe uppercase tracking-wider font-semibold">Email</div>
+              <a [href]="'mailto:' + data.personal.contact.email" class="text-sm font-medium text-charcoal hover:text-taupe transition-colors">
+                {{ data.personal.contact.email }}
               </a>
             </div>
           </div>
 
+          <!-- Phone -->
           <div class="flex items-start gap-4">
-            <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center shrink-0">
+            <div class="w-11 h-11 rounded-2xl bg-rose-blush/50 text-charcoal flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+            </div>
+            <div>
+              <div class="text-xs text-taupe uppercase tracking-wider font-semibold">Phone</div>
+              <a [href]="'tel:' + data.personal.contact.phone" class="text-sm font-medium text-charcoal hover:text-taupe transition-colors">
+                +91 {{ data.personal.contact.phone }}
+              </a>
+            </div>
+          </div>
+
+          <!-- Location -->
+          <div class="flex items-start gap-4">
+            <div class="w-11 h-11 rounded-2xl bg-rose-blush/50 text-charcoal flex items-center justify-center shrink-0">
               <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
             </div>
             <div>
-              <div class="text-xs text-slate-500 uppercase tracking-wider font-semibold">Location</div>
-              <div class="text-sm text-slate-200">San Francisco, CA (Remote Friendly)</div>
-            </div>
-          </div>
-
-          <div class="flex items-start gap-4">
-            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0">
-              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <div>
-              <div class="text-xs text-slate-500 uppercase tracking-wider font-semibold">Response Time</div>
-              <div class="text-sm text-slate-200">Usually within 24 hours</div>
+              <div class="text-xs text-taupe uppercase tracking-wider font-semibold">Location</div>
+              <div class="text-sm font-medium text-charcoal">{{ data.personal.contact.location }}</div>
             </div>
           </div>
         </div>
 
-        <div class="pt-6 border-t border-slate-800">
-          <div class="text-xs text-slate-500 uppercase tracking-wider font-semibold mb-3">Connect Online</div>
+        <!-- Social links -->
+        <div class="pt-6 border-t border-rose-blush/30">
+          <div class="text-xs text-taupe uppercase tracking-wider font-semibold mb-3">Professional Profiles</div>
           <div class="flex items-center gap-3">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 flex items-center justify-center transition-colors">
-              <span class="sr-only">GitHub</span>
+            <a
+              [href]="data.personal.contact.githubUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-11 h-11 rounded-2xl bg-[#FDF8F7] border border-rose-blush/60 text-charcoal hover:bg-rose-blush flex items-center justify-center transition-colors shadow-xs"
+              title="GitHub Profile"
+            >
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 flex items-center justify-center transition-colors">
-              <span class="sr-only">LinkedIn</span>
+            <a
+              [href]="data.personal.contact.linkedinUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-11 h-11 rounded-2xl bg-[#FDF8F7] border border-rose-blush/60 text-charcoal hover:bg-rose-blush flex items-center justify-center transition-colors shadow-xs"
+              title="LinkedIn Profile"
+            >
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-            </a>
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 flex items-center justify-center transition-colors">
-              <span class="sr-only">X (Twitter)</span>
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             </a>
           </div>
         </div>
@@ -84,16 +96,16 @@
 
     <!-- Contact Form Column -->
     <div class="lg:col-span-7">
-      <div class="p-8 rounded-3xl bg-slate-900/60 border border-slate-800">
-        <h2 class="text-xl font-bold text-white mb-6">Send a Message</h2>
+      <div class="p-8 rounded-3xl glass-card card-lift">
+        <h2 class="text-2xl font-serif font-bold text-charcoal mb-6">Send a Message</h2>
 
         @if (isSuccess()) {
-          <div class="p-4 mb-6 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-sm flex items-start justify-between">
+          <div class="p-4 mb-6 rounded-2xl bg-emerald-500/15 border border-emerald-500/30 text-emerald-800 text-sm flex items-start justify-between">
             <div>
-              <p class="font-bold">Message sent successfully!</p>
-              <p class="text-xs text-emerald-400 mt-0.5">Thank you for reaching out. I'll get back to you shortly.</p>
+              <p class="font-bold">Thank you for your message!</p>
+              <p class="text-xs text-emerald-700 mt-0.5">I will respond to your inquiry as soon as possible.</p>
             </div>
-            <button type="button" (click)="resetStatus()" class="text-emerald-400 hover:text-emerald-200 text-xs font-semibold">
+            <button type="button" (click)="resetStatus()" class="text-emerald-700 hover:text-emerald-900 text-xs font-semibold">
               Dismiss
             </button>
           </div>
@@ -102,60 +114,60 @@
         <form (ngSubmit)="onSubmit()" class="space-y-4">
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label for="name" class="block text-xs font-semibold text-slate-300 mb-1.5 uppercase tracking-wider">Your Name</label>
+              <label for="name" class="block text-xs font-semibold text-taupe mb-1.5 uppercase tracking-wider">Your Name</label>
               <input
                 id="name"
                 name="name"
                 type="text"
                 required
                 [(ngModel)]="name"
-                placeholder="Jane Doe"
-                class="w-full px-4 py-2.5 rounded-xl bg-slate-800/80 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-sm transition-colors"
+                placeholder="Riya Jha"
+                class="w-full px-4 py-3 rounded-xl bg-[#FDF8F7] border border-rose-blush/60 text-charcoal placeholder-taupe/60 focus:outline-none focus:border-taupe focus:ring-1 focus:ring-taupe text-sm transition-colors"
               />
             </div>
             <div>
-              <label for="email" class="block text-xs font-semibold text-slate-300 mb-1.5 uppercase tracking-wider">Email Address</label>
+              <label for="email" class="block text-xs font-semibold text-taupe mb-1.5 uppercase tracking-wider">Email Address</label>
               <input
                 id="email"
                 name="email"
                 type="email"
                 required
                 [(ngModel)]="email"
-                placeholder="jane@example.com"
-                class="w-full px-4 py-2.5 rounded-xl bg-slate-800/80 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-sm transition-colors"
+                placeholder="riya@example.com"
+                class="w-full px-4 py-3 rounded-xl bg-[#FDF8F7] border border-rose-blush/60 text-charcoal placeholder-taupe/60 focus:outline-none focus:border-taupe focus:ring-1 focus:ring-taupe text-sm transition-colors"
               />
             </div>
           </div>
 
           <div>
-            <label for="subject" class="block text-xs font-semibold text-slate-300 mb-1.5 uppercase tracking-wider">Subject</label>
+            <label for="subject" class="block text-xs font-semibold text-taupe mb-1.5 uppercase tracking-wider">Subject</label>
             <input
               id="subject"
               name="subject"
               type="text"
               [(ngModel)]="subject"
-              placeholder="Project Collaboration / Inquiries"
-              class="w-full px-4 py-2.5 rounded-xl bg-slate-800/80 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-sm transition-colors"
+              placeholder="Collaboration / Project / Opportunity"
+              class="w-full px-4 py-3 rounded-xl bg-[#FDF8F7] border border-rose-blush/60 text-charcoal placeholder-taupe/60 focus:outline-none focus:border-taupe focus:ring-1 focus:ring-taupe text-sm transition-colors"
             />
           </div>
 
           <div>
-            <label for="message" class="block text-xs font-semibold text-slate-300 mb-1.5 uppercase tracking-wider">Message</label>
+            <label for="message" class="block text-xs font-semibold text-taupe mb-1.5 uppercase tracking-wider">Message</label>
             <textarea
               id="message"
               name="message"
               rows="5"
               required
               [(ngModel)]="message"
-              placeholder="Tell me about your project, timeline, and goals..."
-              class="w-full px-4 py-2.5 rounded-xl bg-slate-800/80 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-sm transition-colors resize-none"
+              placeholder="Write your note here..."
+              class="w-full px-4 py-3 rounded-xl bg-[#FDF8F7] border border-rose-blush/60 text-charcoal placeholder-taupe/60 focus:outline-none focus:border-taupe focus:ring-1 focus:ring-taupe text-sm transition-colors resize-none"
             ></textarea>
           </div>
 
           <button
             type="submit"
             [disabled]="isSubmitting() || !name || !email || !message"
-            class="w-full py-3 px-6 rounded-xl bg-indigo-600 hover:bg-indigo-500 disabled:bg-slate-800 disabled:text-slate-500 disabled:cursor-not-allowed text-white font-medium shadow-lg shadow-indigo-600/30 transition-all duration-200 cursor-pointer"
+            class="w-full py-3.5 px-6 rounded-xl bg-charcoal text-[#FDF8F7] hover:bg-taupe disabled:bg-taupe/20 disabled:text-taupe/50 disabled:cursor-not-allowed font-medium shadow-md transition-all duration-200 cursor-pointer"
           >
             @if (isSubmitting()) {
               <span>Sending Message...</span>

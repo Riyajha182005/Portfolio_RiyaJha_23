@@ -5,7 +5,7 @@ interface GalleryItem {
   title: string;
   category: string;
   description: string;
-  gradient: string;
+  badge: string;
   tags: string[];
 }
 
@@ -18,56 +18,56 @@ interface GalleryItem {
 export class Gallery {
   protected readonly selectedCategory = signal<string>('All');
 
-  protected readonly categories = ['All', 'UI Design', 'Web Apps', 'Mobile', 'Design System'];
+  protected readonly categories = ['All', 'AI & Agents', 'Workflows', 'Computer Vision', 'Enterprise'];
 
   protected readonly items: GalleryItem[] = [
     {
       id: 1,
-      title: 'Fintech Analytics Dashboard',
-      category: 'Web Apps',
-      description: 'Real-time financial telemetry with dark mode high-contrast metrics and interactive charts.',
-      gradient: 'from-blue-600 via-indigo-600 to-cyan-500',
-      tags: ['Dashboard', 'Tailwind', 'Data Viz'],
+      title: 'Automated Telegram Scholarship Alert Bot',
+      category: 'Workflows',
+      badge: 'n8n & LLM Orchestration',
+      description: 'System workflow integrating webhook listeners, parsing educational grants, and publishing instant notifications.',
+      tags: ['n8n', 'Python', 'Telegram API', 'LLMs'],
     },
     {
       id: 2,
-      title: 'Neomorphic Music Player',
-      category: 'UI Design',
-      description: 'Sleek acoustic interface with ambient glassmorphism and tactile dynamic controls.',
-      gradient: 'from-purple-600 via-pink-600 to-rose-500',
-      tags: ['Audio', 'Glassmorphism', 'Figma'],
+      title: 'Multi-Agent RAG & Calculator Flow',
+      category: 'AI & Agents',
+      badge: 'LangGraph & FAISS Architecture',
+      description: 'LangGraph workflow combining mathematical reasoning agents with vector database similarity search.',
+      tags: ['LangGraph', 'FAISS', 'Claude', 'Vector Search'],
     },
     {
       id: 3,
-      title: 'Crypto Wallet Mobile App',
-      category: 'Mobile',
-      description: 'Decentralized asset manager with biometric authentication and gas tracker widgets.',
-      gradient: 'from-emerald-500 via-teal-600 to-cyan-600',
-      tags: ['Mobile UI', 'Web3', 'Prototypes'],
+      title: 'Real-time Object Masking & Cloak',
+      category: 'Computer Vision',
+      badge: 'OpenCV Processing',
+      description: 'Color detection and dynamic background subtraction pipeline executing at 60 FPS in real-time camera streams.',
+      tags: ['OpenCV', 'Python', 'Computer Vision'],
     },
     {
       id: 4,
-      title: 'Enterprise Design Token System',
-      category: 'Design System',
-      description: 'Cross-platform design token framework unifying typography, spacing, and semantic color scales.',
-      gradient: 'from-amber-500 via-orange-600 to-red-600',
-      tags: ['SCSS', 'Tokens', 'Components'],
+      title: 'Defense Power MOSFET Reliability Telemetry',
+      category: 'Enterprise',
+      badge: 'DRDO - SSPL Research',
+      description: 'Accelerated stress condition analysis, failure-rate models, and semiconductor device degradation tracking.',
+      tags: ['Predictive Maintenance', 'Semiconductors', 'Python'],
     },
     {
       id: 5,
-      title: 'AI Prompt Studio Interface',
-      category: 'Web Apps',
-      description: 'Interactive playground for prompt tuning, multimodal streaming tokens, and model switching.',
-      gradient: 'from-violet-600 via-purple-700 to-indigo-800',
-      tags: ['AI UI', 'Streaming', 'Angular'],
+      title: 'Pneumax Vendor Business Portal Modules',
+      category: 'Enterprise',
+      badge: 'Enterprise Architecture',
+      description: 'Vendor lifecycle management UI with warranty tracking, status remarks, and secure document workflows.',
+      tags: ['.NET Core', 'Vendor Portals', 'Testing'],
     },
     {
       id: 6,
-      title: 'Eco Living Smart Home Controller',
-      category: 'Mobile',
-      description: 'Sustainable smart home energy monitoring mobile layout with automated thermal regulation.',
-      gradient: 'from-teal-500 via-green-600 to-emerald-700',
-      tags: ['IoT', 'Clean Energy', 'Mobile'],
+      title: 'Prompt Engineering & LLM Optimization Matrix',
+      category: 'AI & Agents',
+      badge: 'IGDTUW Gen AI Research',
+      description: 'Systematic prompt tuning benchmarks, few-shot prompt libraries, and output evaluation pipelines.',
+      tags: ['Prompt Engineering', 'LLM Tuning', 'Evaluation'],
     },
   ];
 

@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { PORTFOLIO_DATA } from '../../data/portfolio-data';
 
 @Component({
   selector: 'app-contact',
@@ -8,6 +9,8 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './contact.scss',
 })
 export class Contact {
+  protected readonly data = PORTFOLIO_DATA;
+
   protected name = '';
   protected email = '';
   protected subject = '';

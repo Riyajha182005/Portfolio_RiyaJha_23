@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { PORTFOLIO_DATA } from '../../data/portfolio-data';
 
 @Component({
   selector: 'app-home',
@@ -8,21 +9,12 @@ import { RouterLink } from '@angular/router';
   styleUrl: './home.scss',
 })
 export class Home {
-  protected readonly skills = [
-    { name: 'Angular', level: 'Advanced', category: 'Frontend' },
-    { name: 'TypeScript', level: 'Advanced', category: 'Language' },
-    { name: 'Tailwind CSS', level: 'Expert', category: 'Styling' },
-    { name: 'SCSS / Sass', level: 'Expert', category: 'Styling' },
-    { name: 'Node.js', level: 'Intermediate', category: 'Backend' },
-    { name: 'RxJS & Signals', level: 'Advanced', category: 'State' },
-    { name: 'REST APIs', level: 'Advanced', category: 'Integration' },
-    { name: 'Git & CI/CD', level: 'Intermediate', category: 'DevOps' },
-  ];
+  protected readonly data = PORTFOLIO_DATA;
 
   protected readonly stats = [
-    { label: 'Years of Experience', value: '4+' },
-    { label: 'Completed Projects', value: '25+' },
-    { label: 'Satisfied Clients', value: '18+' },
-    { label: 'Code Quality Score', value: '99%' },
+    { label: 'Academic CGPA', value: '9.24' },
+    { label: 'Internships & Research', value: '3' },
+    { label: 'Featured AI Projects', value: '3+' },
+    { label: 'Core Technical Skills', value: '20+' },
   ];
 }
