@@ -1,0 +1,68 @@
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  <!-- Header -->
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-pink-500/10 border border-pink-500/20 text-pink-400 text-xs font-medium mb-4">
+      Visual Showcase
+    </div>
+    <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
+      Design <span class="bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">Gallery</span>
+    </h1>
+    <p class="text-slate-400 max-w-xl mx-auto text-base">
+      A visual compilation of interface mockups, creative prototypes, and design system components.
+    </p>
+  </div>
+
+  <!-- Filter Pills -->
+  <div class="flex flex-wrap items-center justify-center gap-2 mb-12">
+    @for (category of categories; track category) {
+      <button
+        type="button"
+        (click)="setCategory(category)"
+        [class]="
+          selectedCategory() === category
+            ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/30'
+            : 'bg-slate-900 text-slate-300 hover:bg-slate-800 hover:text-white border border-slate-800'
+        "
+        class="px-4 py-2 rounded-xl text-sm font-medium transition-all duration-150 cursor-pointer"
+      >
+        {{ category }}
+      </button>
+    }
+  </div>
+
+  <!-- Gallery Grid -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    @for (item of filteredItems(); track item.id) {
+      <div class="group rounded-2xl bg-slate-900/60 border border-slate-800 overflow-hidden hover:border-indigo-500/50 hover:shadow-xl hover:shadow-indigo-500/10 transition-all duration-300 flex flex-col">
+        <!-- Visual Card Banner -->
+        <div class="h-48 w-full bg-gradient-to-tr {{ item.gradient }} p-6 flex flex-col justify-between relative overflow-hidden group-hover:scale-105 transition-transform duration-300">
+          <div class="flex items-center justify-between text-white/90">
+            <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-black/30 backdrop-blur-md">
+              {{ item.category }}
+            </span>
+            <span class="text-xs font-mono">#0{{ item.id }}</span>
+          </div>
+
+          <div class="text-white drop-shadow-md">
+            <h3 class="text-lg font-bold leading-tight">{{ item.title }}</h3>
+          </div>
+        </div>
+
+        <!-- Details -->
+        <div class="p-6 flex-1 flex flex-col justify-between bg-slate-900/90">
+          <p class="text-sm text-slate-400 mb-6 leading-relaxed">
+            {{ item.description }}
+          </p>
+
+          <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-800">
+            @for (tag of item.tags; track tag) {
+              <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 font-mono">
+                #{{ tag }}
+              </span>
+            }
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>

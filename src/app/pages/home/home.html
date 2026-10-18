@@ -1,0 +1,112 @@
+<div class="relative overflow-hidden">
+  <!-- Background Glow Accents -->
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-gradient-to-tr from-indigo-600/20 via-purple-600/20 to-pink-500/10 blur-3xl pointer-events-none -z-10 rounded-full"></div>
+
+  <!-- Hero Section -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 lg:pt-28 lg:pb-24">
+    <div class="text-center max-w-3xl mx-auto">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-medium mb-6">
+        <span class="w-2 h-2 rounded-full bg-indigo-400 animate-ping"></span>
+        <span>Welcome to My Portfolio</span>
+      </div>
+
+      <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+        Building modern, high-performance <span class="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Web Experiences</span>
+      </h1>
+
+      <p class="text-lg sm:text-xl text-slate-300 mb-10 leading-relaxed">
+        Passionate Frontend Engineer crafting scalable Angular applications, responsive user interfaces, and engaging digital interactions with cutting-edge technologies.
+      </p>
+
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a
+          routerLink="/projects"
+          class="px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-medium shadow-lg shadow-indigo-600/30 transition-all duration-200"
+        >
+          Explore Projects
+        </a>
+        <a
+          routerLink="/experience"
+          class="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 font-medium transition-all duration-200"
+        >
+          View Experience
+        </a>
+        <a
+          routerLink="/contact"
+          class="px-6 py-3 rounded-xl bg-transparent hover:bg-slate-800/50 text-slate-300 font-medium transition-all duration-200"
+        >
+          Contact Me &rarr;
+        </a>
+      </div>
+    </div>
+
+    <!-- Quick Stats Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20">
+      @for (stat of stats; track stat.label) {
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 backdrop-blur-sm text-center hover:border-slate-700 transition-colors">
+          <div class="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400 mb-1">
+            {{ stat.value }}
+          </div>
+          <div class="text-xs sm:text-sm text-slate-400 font-medium">{{ stat.label }}</div>
+        </div>
+      }
+    </div>
+  </section>
+
+  <!-- Skills & Technologies Section -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-slate-800/60">
+    <div class="text-center mb-12">
+      <h2 class="text-2xl sm:text-3xl font-bold text-white mb-3">Core Technical Stack</h2>
+      <p class="text-slate-400 max-w-xl mx-auto text-sm sm:text-base">
+        Modern libraries, frameworks, and developer tooling used daily to craft robust software.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+      @for (skill of skills; track skill.name) {
+        <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800/80 hover:border-indigo-500/40 hover:bg-slate-900 transition-all group">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-white font-medium group-hover:text-indigo-300 transition-colors">{{ skill.name }}</span>
+            <span class="text-xs px-2 py-0.5 rounded-full bg-slate-800 text-slate-400">{{ skill.category }}</span>
+          </div>
+          <div class="text-xs text-indigo-400 font-medium">{{ skill.level }}</div>
+        </div>
+      }
+    </div>
+  </section>
+
+  <!-- Quick Navigation Highlights -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <a routerLink="/experience" class="p-6 rounded-2xl bg-gradient-to-b from-slate-900 to-slate-950 border border-slate-800 hover:border-indigo-500/50 transition-all group">
+        <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center font-bold text-xl mb-4 group-hover:bg-indigo-500 group-hover:text-white transition-colors">
+          💼
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2 group-hover:text-indigo-400 transition-colors">Professional Journey</h3>
+        <p class="text-sm text-slate-400 leading-relaxed">
+          Explore my past roles, key accomplishments, companies worked with, and leadership highlights.
+        </p>
+      </a>
+
+      <a routerLink="/projects" class="p-6 rounded-2xl bg-gradient-to-b from-slate-900 to-slate-950 border border-slate-800 hover:border-purple-500/50 transition-all group">
+        <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center font-bold text-xl mb-4 group-hover:bg-purple-500 group-hover:text-white transition-colors">
+          🚀
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">Featured Projects</h3>
+        <p class="text-sm text-slate-400 leading-relaxed">
+          Case studies, open-source repositories, and web applications demonstrating end-to-end expertise.
+        </p>
+      </a>
+
+      <a routerLink="/gallery" class="p-6 rounded-2xl bg-gradient-to-b from-slate-900 to-slate-950 border border-slate-800 hover:border-pink-500/50 transition-all group">
+        <div class="w-12 h-12 rounded-xl bg-pink-500/10 text-pink-400 flex items-center justify-center font-bold text-xl mb-4 group-hover:bg-pink-500 group-hover:text-white transition-colors">
+          🎨
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2 group-hover:text-pink-400 transition-colors">Design Gallery</h3>
+        <p class="text-sm text-slate-400 leading-relaxed">
+          Visual showcase of UI components, animations, design system experiments, and creative artwork.
+        </p>
+      </a>
+    </div>
+  </section>
+</div>
