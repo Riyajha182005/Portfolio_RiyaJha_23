@@ -2,18 +2,19 @@
 
 @config "../tailwind.config.js";
 
-/* Tailwind CSS v4 Theme Overrides */
+/* Tailwind CSS v4 Theme Overrides for Dark Moody Rich Plum Theme */
 @theme {
-  --color-background: #FDF8F7;
-  --color-theme-bg: #FDF8F7;
-  --color-primary-rose: #E8C5C8;
-  --color-primary-blush: #E8C5C8;
-  --color-rose-blush: #E8C5C8;
-  --color-blush: #E8C5C8;
-  --color-warm-taupe: #8C7A6B;
-  --color-taupe-accent: #8C7A6B;
-  --color-charcoal-text: #2D2B2A;
-  --color-charcoal: #2D2B2A;
+  --color-background: #181419;
+  --color-theme-bg: #181419;
+  --color-primary-rose: #E0A96D;
+  --color-primary-blush: #E8A598;
+  --color-rose-blush: #E0A96D;
+  --color-rose-gold: #E0A96D;
+  --color-rose-glow: #F43F5E;
+  --color-warm-taupe: #E0A96D;
+  --color-taupe-accent: #E0A96D;
+  --color-charcoal-text: #FAF5F7;
+  --color-charcoal: #FAF5F7;
 
   --font-serif: 'Playfair Display', Georgia, serif;
   --font-display: 'Playfair Display', Georgia, serif;
@@ -25,13 +26,14 @@
 /* Base styles & typography defaults */
 html {
   scroll-behavior: smooth;
+  color-scheme: dark;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
-  background-color: #FDF8F7;
-  color: #2D2B2A;
+  background-color: #181419;
+  color: #EDE4E7;
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -42,55 +44,56 @@ body {
 h1, h2, h3, h4, h5, h6, .font-heading, .font-serif, .font-display {
   font-family: 'Playfair Display', Georgia, serif;
   letter-spacing: -0.015em;
+  color: #FAF5F7;
 }
 
 /* ==========================================================================
-   Glassmorphism Container Classes
+   Glassmorphism Dark Moody Plum Containers & Soft Muted Rose Borders (#3A2E39)
    ========================================================================== */
 
 .glass-container,
 .glass-panel,
 .glass-card {
-  background: rgba(253, 248, 247, 0.75);
+  background: rgba(28, 22, 29, 0.78);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(232, 197, 200, 0.45);
-  box-shadow: 0 8px 32px 0 rgba(140, 122, 107, 0.08);
+  border: 1px solid #3A2E39;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
 }
 
 .glass-card-blush {
-  background: rgba(232, 197, 200, 0.28);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(232, 197, 200, 0.6);
-  box-shadow: 0 8px 28px 0 rgba(140, 122, 107, 0.1);
+  background: rgba(45, 33, 44, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(224, 169, 109, 0.3);
+  box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 0.45);
 }
 
 .glass-card-taupe {
-  background: rgba(140, 122, 107, 0.08);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(140, 122, 107, 0.22);
-  box-shadow: 0 8px 30px 0 rgba(45, 43, 42, 0.05);
+  background: rgba(31, 25, 33, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid #3A2E39;
+  box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 0.5);
 }
 
 .glass-pill {
-  background: rgba(253, 248, 247, 0.85);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(232, 197, 200, 0.5);
-  box-shadow: 0 2px 10px 0 rgba(140, 122, 107, 0.06);
+  background: rgba(38, 30, 40, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid #3A2E39;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.35);
 }
 
 .glass-header {
-  background: rgba(253, 248, 247, 0.82);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(232, 197, 200, 0.5);
+  background: rgba(24, 20, 25, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid #3A2E39;
 }
 
 /* ==========================================================================
-   Smooth Hover Card-Lift Transitions
+   Smooth Hover Card-Lift Transitions with Glowing Rose-Gold Accents
    ========================================================================== */
 
 .card-lift {
@@ -101,8 +104,8 @@ h1, h2, h3, h4, h5, h6, .font-heading, .font-serif, .font-display {
 
   &:hover {
     transform: translateY(-6px);
-    box-shadow: 0 20px 36px -10px rgba(140, 122, 107, 0.22),
-                0 0 0 1px rgba(232, 197, 200, 0.7);
+    box-shadow: 0 22px 42px -10px rgba(0, 0, 0, 0.65), 0 0 28px -4px rgba(224, 169, 109, 0.32);
+    border-color: rgba(224, 169, 109, 0.5);
   }
 }
 
@@ -114,8 +117,8 @@ h1, h2, h3, h4, h5, h6, .font-heading, .font-serif, .font-display {
 
   &:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 24px -6px rgba(140, 122, 107, 0.16),
-                0 0 0 1px rgba(232, 197, 200, 0.5);
+    box-shadow: 0 14px 28px -6px rgba(0, 0, 0, 0.55), 0 0 18px -3px rgba(224, 169, 109, 0.28);
+    border-color: rgba(224, 169, 109, 0.4);
   }
 }
 
@@ -127,7 +130,26 @@ h1, h2, h3, h4, h5, h6, .font-heading, .font-serif, .font-display {
 
   &:hover {
     transform: translateY(-5px) scale(1.015);
-    box-shadow: 0 22px 42px -12px rgba(140, 122, 107, 0.25),
-                0 0 0 1px rgba(232, 197, 200, 0.7);
+    box-shadow: 0 24px 44px -12px rgba(0, 0, 0, 0.7), 0 0 32px -4px rgba(244, 63, 94, 0.3);
+    border-color: rgba(224, 169, 109, 0.55);
   }
+}
+
+/* Custom Scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #181419;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3A2E39;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E0A96D;
 }

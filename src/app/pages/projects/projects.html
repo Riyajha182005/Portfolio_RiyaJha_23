@@ -1,13 +1,13 @@
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
   <!-- Page Header -->
   <div class="text-center mb-16">
-    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-pill text-taupe text-xs font-semibold uppercase tracking-wider mb-4">
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-pill border border-[#3A2E39] text-[#E0A96D] text-xs font-semibold uppercase tracking-wider mb-4">
       Innovations &amp; Builds
     </div>
-    <h1 class="text-4xl sm:text-5xl font-serif font-bold text-charcoal tracking-tight mb-4">
-      Featured <span class="italic font-normal text-taupe">Projects</span>
+    <h1 class="text-4xl sm:text-5xl font-serif font-bold text-[#FAF5F7] tracking-tight mb-4">
+      Featured <span class="italic font-normal bg-gradient-to-r from-[#E0A96D] to-[#F43F5E] bg-clip-text text-transparent">Projects</span>
     </h1>
-    <p class="text-taupe max-w-xl mx-auto text-base font-sans">
+    <p class="text-[#C7B8BF] max-w-xl mx-auto text-base font-sans">
       AI agents, automated workflows, retrieval-augmented systems, and computer vision applications.
     </p>
   </div>
@@ -15,11 +15,11 @@
   <!-- Projects Grid with Glass Cards & Hover Card-Lift -->
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     @for (project of data.projects; track project.title) {
-      <div class="rounded-3xl glass-card card-lift p-8 flex flex-col justify-between">
+      <div class="rounded-3xl glass-card card-lift border border-[#3A2E39] p-8 flex flex-col justify-between">
         <div>
           <!-- Header category badge & links -->
           <div class="flex items-center justify-between mb-5">
-            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-blush/40 text-charcoal border border-rose-blush/60 text-xs font-semibold">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E0A96D]/15 text-[#E0A96D] border border-[#E0A96D]/30 text-xs font-semibold">
               {{ project.category }}
             </span>
 
@@ -28,7 +28,7 @@
                 [href]="project.githubUrl"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="p-2 rounded-xl text-taupe hover:text-charcoal hover:bg-rose-blush/30 transition-colors"
+                class="p-2 rounded-xl text-[#C7B8BF] hover:text-[#FAF5F7] hover:bg-[#2A202C] border border-[#3A2E39] transition-colors"
                 title="View GitHub Repository"
               >
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
@@ -36,19 +36,19 @@
             }
           </div>
 
-          <h2 class="text-2xl font-serif font-bold text-charcoal mb-3">
+          <h2 class="text-2xl font-serif font-bold text-[#FAF5F7] mb-3">
             {{ project.title }}
           </h2>
 
-          <p class="text-sm text-taupe leading-relaxed mb-6">
+          <p class="text-sm text-[#C7B8BF] leading-relaxed mb-6 font-sans">
             {{ project.description }}
           </p>
 
           <!-- Key Highlights -->
           <div class="mb-6 space-y-2">
             @for (highlight of project.highlights; track highlight) {
-              <div class="flex items-start text-xs sm:text-sm text-charcoal/85 leading-relaxed">
-                <span class="text-taupe mr-2 font-bold">&bull;</span>
+              <div class="flex items-start text-xs sm:text-sm text-[#EDE4E7] leading-relaxed">
+                <span class="text-[#E0A96D] mr-2 font-bold">&bull;</span>
                 <span>{{ highlight }}</span>
               </div>
             }
@@ -56,9 +56,9 @@
         </div>
 
         <!-- Tech tags -->
-        <div class="flex flex-wrap gap-2 pt-5 border-t border-rose-blush/30">
+        <div class="flex flex-wrap gap-2 pt-5 border-t border-[#3A2E39]">
           @for (tech of project.technologies; track tech) {
-            <span class="text-xs px-2.5 py-1 rounded-lg bg-rose-blush/25 border border-rose-blush/40 text-charcoal font-medium">
+            <span class="text-xs px-2.5 py-1 rounded-lg bg-[#2A202C] border border-[#3A2E39] text-[#EDE4E7] font-medium font-mono">
               {{ tech }}
             </span>
           }

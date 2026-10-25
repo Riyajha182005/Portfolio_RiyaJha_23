@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18131B"/>
+      <stop offset="50%" stop-color="#261A28"/>
+      <stop offset="100%" stop-color="#120E15"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg4)"/>
+  
+  <g transform="translate(170, 75)">
+    <rect width="460" height="260" rx="16" fill="#181419" stroke="#3A2E39" stroke-width="2"/>
+    <rect width="460" height="40" rx="16" fill="#241B26"/>
+    <text x="25" y="25" font-family="Inter, sans-serif" font-size="12" fill="#E0A96D" font-weight="bold">AI Hackathon &bull; Telegram Bot Live Pitch</text>
+
+    <!-- Chatbot Mockup -->
+    <rect x="40" y="60" width="380" height="45" rx="10" fill="#291E2C" stroke="#3A2E39"/>
+    <text x="55" y="87" font-family="Inter, sans-serif" font-size="11" fill="#FAF5F7">User: Find Computer Science Master Scholarships in EU</text>
+
+    <rect x="40" y="115" width="380" height="65" rx="10" fill="#351F33" stroke="#F43F5E"/>
+    <text x="55" y="137" font-family="Inter, sans-serif" font-size="11" fill="#E0A96D" font-weight="bold">ScholarshipBot [n8n Automation + Claude]:</text>
+    <text x="55" y="157" font-family="Inter, sans-serif" font-size="10" fill="#EDE4E7">&bull; 3 fully funded grants found matching your profile &bull; Deadlines: Dec 2026</text>
+
+    <g transform="translate(40, 195)">
+      <rect x="0" y="0" width="115" height="40" rx="8" fill="#241A25" stroke="#3A2E39"/>
+      <text x="57" y="24" font-family="Inter, sans-serif" font-size="10" fill="#E0A96D" font-weight="bold" text-anchor="middle">Live Telegram API</text>
+
+      <rect x="130" y="0" width="115" height="40" rx="8" fill="#241A25" stroke="#3A2E39"/>
+      <text x="187" y="24" font-family="Inter, sans-serif" font-size="10" fill="#F43F5E" font-weight="bold" text-anchor="middle">n8n Orchestration</text>
+
+      <rect x="260" y="0" width="120" height="40" rx="8" fill="#241A25" stroke="#3A2E39"/>
+      <text x="320" y="24" font-family="Inter, sans-serif" font-size="10" fill="#FAF5F7" font-weight="bold" text-anchor="middle">Award Winner</text>
+    </g>
+  </g>
+
+  <text x="400" y="395" font-family="'Playfair Display', serif" font-size="24" fill="#FAF5F7" font-weight="bold" text-anchor="middle">AI Hackathon &amp; Live Project Pitch</text>
+  <text x="400" y="425" font-family="Inter, sans-serif" font-size="13" fill="#E0A96D" font-weight="500" text-anchor="middle">Event &bull; Delhi Tech Fest &bull; Nov 2025</text>
+</svg>

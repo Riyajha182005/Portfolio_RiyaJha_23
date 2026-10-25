@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1F1921"/>
+      <stop offset="50%" stop-color="#281F2B"/>
+      <stop offset="100%" stop-color="#141015"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E0A96D"/>
+      <stop offset="100%" stop-color="#F43F5E"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="50%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#E0A96D" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#E0A96D" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg1)"/>
+  <circle cx="400" cy="200" r="280" fill="url(#glow1)"/>
+  
+  <!-- Subtle Grid Lines -->
+  <path d="M50 0 V500 M150 0 V500 M250 0 V500 M350 0 V500 M450 0 V500 M550 0 V500 M650 0 V500 M750 0 V500" stroke="#3A2E39" stroke-width="0.5" stroke-opacity="0.4"/>
+  <path d="M0 80 H800 M0 160 H800 M0 240 H800 M0 320 H800 M0 400 H800" stroke="#3A2E39" stroke-width="0.5" stroke-opacity="0.4"/>
+
+  <!-- Portal Dashboard Window Graphic -->
+  <g transform="translate(180, 70)">
+    <rect width="440" height="280" rx="16" fill="#181419" stroke="#3A2E39" stroke-width="2"/>
+    <rect width="440" height="42" rx="16" fill="#241B26"/>
+    <circle cx="28" cy="21" r="5" fill="#F43F5E"/>
+    <circle cx="46" cy="21" r="5" fill="#E0A96D"/>
+    <circle cx="64" cy="21" r="5" fill="#3A2E39"/>
+    <text x="90" y="26" font-family="Inter, sans-serif" font-size="12" fill="#C7B8BF">Pneumax Vendor Portal &bull; Enterprise Architecture</text>
+    
+    <!-- Dashboard Cards Inside Window -->
+    <rect x="25" y="60" width="180" height="90" rx="8" fill="#201822" stroke="#3A2E39" stroke-width="1"/>
+    <text x="40" y="85" font-family="Inter, sans-serif" font-size="10" fill="#E0A96D" font-weight="bold">MODULE: VENDOR INFO</text>
+    <rect x="40" y="100" width="120" height="8" rx="4" fill="#3A2E39"/>
+    <rect x="40" y="118" width="90" height="8" rx="4" fill="#3A2E39"/>
+
+    <rect x="235" y="60" width="180" height="90" rx="8" fill="#201822" stroke="#3A2E39" stroke-width="1"/>
+    <text x="250" y="85" font-family="Inter, sans-serif" font-size="10" fill="#F43F5E" font-weight="bold">MODULE: WARRANTY</text>
+    <rect x="250" y="100" width="140" height="8" rx="4" fill="#3A2E39"/>
+    <rect x="250" y="118" width="100" height="8" rx="4" fill="#3A2E39"/>
+
+    <rect x="25" y="170" width="390" height="80" rx="8" fill="#201822" stroke="#3A2E39" stroke-width="1"/>
+    <text x="40" y="195" font-family="Inter, sans-serif" font-size="10" fill="#EDE4E7" font-weight="bold">WORKFLOW ENGINE: VALIDATION &amp; AUDIT TRAIL</text>
+    <rect x="40" y="210" width="360" height="10" rx="5" fill="#2B212E"/>
+    <rect x="40" y="210" width="270" height="10" rx="5" fill="url(#goldGrad)"/>
+    <text x="40" y="235" font-family="Inter, sans-serif" font-size="9" fill="#A3929C">98.4% Automated Verification Passed</text>
+  </g>
+
+  <!-- Title Overlay -->
+  <text x="400" y="410" font-family="'Playfair Display', serif" font-size="24" fill="#FAF5F7" font-weight="bold" text-anchor="middle">Pneumax Pneumatic India Pvt. Ltd.</text>
+  <text x="400" y="440" font-family="Inter, sans-serif" font-size="13" fill="#E0A96D" font-weight="500" text-anchor="middle">SE Internship &bull; Greater Noida, UP &bull; Jun 2026 – Aug 2026</text>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141116"/>
+      <stop offset="50%" stop-color="#221A25"/>
+      <stop offset="100%" stop-color="#19131B"/>
+    </linearGradient>
+    <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F43F5E"/>
+      <stop offset="100%" stop-color="#E0A96D"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg2)"/>
+  
+  <!-- Semiconductor Waveform Telemetry Visual -->
+  <g transform="translate(160, 75)">
+    <rect width="480" height="260" rx="16" fill="#181419" stroke="#3A2E39" stroke-width="2"/>
+    <rect width="480" height="40" rx="16" fill="#241B26"/>
+    <text x="25" y="25" font-family="Inter, sans-serif" font-size="12" fill="#E0A96D" font-weight="bold">DRDO - SSPL &bull; Power MOSFET Reliability Telemetry</text>
+    
+    <!-- Waveform Graph Lines -->
+    <path d="M40 210 Q 120 180, 180 120 T 300 130 T 400 70 T 450 60" fill="none" stroke="url(#roseGrad)" stroke-width="3"/>
+    <path d="M40 210 Q 120 180, 180 120 T 300 130 T 400 70 T 450 60 L 450 230 L 40 230 Z" fill="url(#roseGrad)" fill-opacity="0.12"/>
+    
+    <!-- Measurement Nodes -->
+    <circle cx="180" cy="120" r="5" fill="#E0A96D"/>
+    <circle cx="300" cy="130" r="5" fill="#F43F5E"/>
+    <circle cx="400" cy="70" r="5" fill="#FAF5F7"/>
+    <text x="375" y="55" font-family="Inter, sans-serif" font-size="10" fill="#FAF5F7" font-weight="bold">V_th: 99.8%</text>
+
+    <!-- Stat boxes below graph -->
+    <rect x="40" y="160" width="115" height="48" rx="6" fill="#251B27" stroke="#3A2E39"/>
+    <text x="50" y="180" font-family="Inter, sans-serif" font-size="9" fill="#A3929C">ACCELERATED STRESS</text>
+    <text x="50" y="198" font-family="Inter, sans-serif" font-size="12" fill="#E0A96D" font-weight="bold">175°C &bull; 480 hrs</text>
+
+    <rect x="170" y="160" width="115" height="48" rx="6" fill="#251B27" stroke="#3A2E39"/>
+    <text x="180" y="180" font-family="Inter, sans-serif" font-size="9" fill="#A3929C">FAILURE PREDICTION</text>
+    <text x="180" y="198" font-family="Inter, sans-serif" font-size="12" fill="#F43F5E" font-weight="bold">λ &lt; 0.0012/yr</text>
+
+    <rect x="300" y="160" width="140" height="48" rx="6" fill="#251B27" stroke="#3A2E39"/>
+    <text x="310" y="180" font-family="Inter, sans-serif" font-size="9" fill="#A3929C">DEFENSE RELIABILITY</text>
+    <text x="310" y="198" font-family="Inter, sans-serif" font-size="12" fill="#FAF5F7" font-weight="bold">Mil-Spec Verified</text>
+  </g>
+
+  <text x="400" y="400" font-family="'Playfair Display', serif" font-size="24" fill="#FAF5F7" font-weight="bold" text-anchor="middle">DRDO – SSPL Semiconductor Lab</text>
+  <text x="400" y="430" font-family="Inter, sans-serif" font-size="13" fill="#E0A96D" font-weight="500" text-anchor="middle">Research Intern &bull; Delhi, India &bull; Feb 2026 – Apr 2026</text>
+</svg>

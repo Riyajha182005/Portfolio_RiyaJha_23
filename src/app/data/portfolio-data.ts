@@ -14,6 +14,7 @@ export interface PersonalInfo {
   bio: string;
   contact: ContactInfo;
   resumeUrl: string;
+  profileImage: string;
 }
 
 export interface EducationItem {
@@ -44,6 +45,19 @@ export interface ProjectItem {
   category: 'AI / Automation' | 'Machine Learning' | 'Web & Software';
 }
 
+export interface InternshipGalleryItem {
+  id: number;
+  title: string;
+  companyOrEvent: string;
+  category: 'Internships' | 'Events' | 'Work Life';
+  description: string;
+  date: string;
+  imagePath: string;
+  tags: string[];
+  location?: string;
+  accentBadge?: string;
+}
+
 export interface SkillCategory {
   category: string;
   skills: string[];
@@ -65,6 +79,7 @@ export interface PortfolioData {
   projects: ProjectItem[];
   skills: TechnicalSkills;
   skillCategories: SkillCategory[];
+  internshipGallery: InternshipGalleryItem[];
 }
 
 export const PORTFOLIO_DATA: PortfolioData = {
@@ -82,6 +97,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
       githubUrl: 'https://github.com/Riyajha182005',
     },
     resumeUrl: 'assets/resume.pdf',
+    profileImage: 'assets/profile.jpg',
   },
   education: [
     {
@@ -167,6 +183,99 @@ export const PORTFOLIO_DATA: PortfolioData = {
         'Implemented computer vision techniques to detect and mask selected objects in real-time video frames.',
       ],
       githubUrl: 'https://github.com/Riyajha182005/The_invisible_cloak',
+    },
+  ],
+  internshipGallery: [
+    {
+      id: 1,
+      title: 'Vendor Portal Software Engineering & Module Architecture',
+      companyOrEvent: 'Pneumax Pneumatic India Pvt. Ltd.',
+      category: 'Internships',
+      date: 'Jun 2026 – Aug 2026',
+      location: 'Greater Noida, UP',
+      description:
+        'Worked on enterprise vendor software modules, architecting dynamic remark submission and warranty handling workflows. Assisted in full test-suite validation and debugging to streamline supplier interactions.',
+      imagePath: 'assets/gallery/pneumax-internship.jpg',
+      tags: ['.NET Core', 'Vendor Portals', 'Software Testing', 'Enterprise Software'],
+      accentBadge: 'SE Internship',
+    },
+    {
+      id: 2,
+      title: 'Power MOSFET Accelerated Stress & Reliability Telemetry',
+      companyOrEvent: 'Defence Research and Development Organisation (DRDO) – SSPL',
+      category: 'Internships',
+      date: 'Feb 2026 – Apr 2026',
+      location: 'Delhi, India',
+      description:
+        'Conducted research on failure pattern classification, semiconductor degradation curves, and predictive maintenance models under high accelerated stress conditions for defense systems.',
+      imagePath: 'assets/gallery/drdo-research.jpg',
+      tags: ['Defense Systems', 'MOSFETs', 'Reliability Analysis', 'Predictive Modeling'],
+      accentBadge: 'DRDO Research',
+    },
+    {
+      id: 3,
+      title: 'Generative AI & LLM Practical Automation Sprint',
+      companyOrEvent: 'IGDTUW',
+      category: 'Internships',
+      date: 'Jun 2025 – Jul 2025',
+      location: 'Delhi, India',
+      description:
+        'Explored Large Language Models for automated document synthesis, prompt optimization methodologies, and evaluating generative output quality across enterprise automation pipelines.',
+      imagePath: 'assets/gallery/igdtuw-ai.jpg',
+      tags: ['Generative AI', 'LLMs', 'Prompt Engineering', 'Automation Workflows'],
+      accentBadge: 'GenAI Intern',
+    },
+    {
+      id: 4,
+      title: 'Smart AI Hackathon: Scholarship Alert Chatbot Live Demo',
+      companyOrEvent: 'Delhi Tech Fest & Hackathon',
+      category: 'Events',
+      date: 'Nov 2025',
+      location: 'Delhi, India',
+      description:
+        'Live demonstration of the autonomous n8n + Telegram scholarship alert bot. Pitched automated parsing algorithms and LLM interaction features to industry judging panels.',
+      imagePath: 'assets/gallery/hackathon-demo.jpg',
+      tags: ['Hackathon', 'Telegram API', 'n8n Workflows', 'Live Pitch'],
+      accentBadge: 'Tech Event',
+    },
+    {
+      id: 5,
+      title: 'Redefine Possible Event by GDG New Delhi',
+      companyOrEvent: 'GDG New Delhi',
+      category: 'Events',
+      date: '2026',
+      location: 'New Delhi, India',
+      description:
+        'Engaged with developers and tech leaders at the Redefine Possible event organized by GDG New Delhi, exploring cutting-edge Google developer tools, emerging AI workflows, and cloud ecosystem trends.',
+      imagePath: 'assets/gallery/gdg-redefine-possible.jpg',
+      tags: ['GDG New Delhi', 'Google Developers', 'Redefine Possible', 'AI & Cloud'],
+      accentBadge: 'GDG Event',
+    },
+    {
+      id: 6,
+      title: 'Dev-Fest Noida 2026',
+      companyOrEvent: 'DevFest Noida',
+      category: 'Events',
+      date: '2026',
+      location: 'Noida, UP',
+      description:
+        'Participated in Dev-Fest Noida 2026, attending keynotes and developer deep-dives on modern full-stack engineering, scalable artificial intelligence, and open developer collaboration.',
+      imagePath: 'assets/gallery/devfest-noida.jpg',
+      tags: ['DevFest 2026', 'GDG Noida', 'Tech Conference', 'Community Summit'],
+      accentBadge: 'DevFest 2026',
+    },
+    {
+      id: 7,
+      title: 'Azure Developer Community at Microsoft',
+      companyOrEvent: 'Microsoft & Azure Community',
+      category: 'Events',
+      date: '2026',
+      location: 'Microsoft Office, NCR',
+      description:
+        'Attended the Azure Developer Community conference at Microsoft, gaining hands-on insights into Microsoft Azure services, intelligent cloud architectures, and modern cloud-native engineering.',
+      imagePath: 'assets/gallery/azure-dev-community.jpg',
+      tags: ['Azure', 'Microsoft', 'Cloud Architecture', 'Developer Community'],
+      accentBadge: 'Microsoft Event',
     },
   ],
   skills: {

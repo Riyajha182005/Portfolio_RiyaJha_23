@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1F1521"/>
+      <stop offset="50%" stop-color="#2D1C2D"/>
+      <stop offset="100%" stop-color="#140E16"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg5)"/>
+
+  <g transform="translate(180, 80)">
+    <rect width="440" height="250" rx="16" fill="#181419" stroke="#3A2E39" stroke-width="2"/>
+    <rect width="440" height="40" rx="16" fill="#241B26"/>
+    <text x="25" y="25" font-family="Inter, sans-serif" font-size="12" fill="#E0A96D" font-weight="bold">GGSIPU &bull; Annual Technical Symposium</text>
+
+    <!-- Stage / Presentation Podium Visual -->
+    <path d="M70 200 L120 100 L320 100 L370 200 Z" fill="#291D2B" stroke="#3A2E39"/>
+    <text x="220" y="145" font-family="'Playfair Display', serif" font-size="16" fill="#FAF5F7" font-weight="bold" text-anchor="middle">Neural Computing &amp; IT Trends</text>
+    <text x="220" y="170" font-family="Inter, sans-serif" font-size="11" fill="#E0A96D" text-anchor="middle">Information Technology &bull; GGSIPU</text>
+  </g>
+
+  <text x="400" y="390" font-family="'Playfair Display', serif" font-size="24" fill="#FAF5F7" font-weight="bold" text-anchor="middle">University Tech Symposium &amp; AI Colloquium</text>
+  <text x="400" y="420" font-family="Inter, sans-serif" font-size="13" fill="#E0A96D" font-weight="500" text-anchor="middle">Academic Event &bull; Guru Gobind Singh Indraprastha University &bull; Apr 2025</text>
+</svg>

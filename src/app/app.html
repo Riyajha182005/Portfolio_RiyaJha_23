@@ -1,87 +1,105 @@
-<div class="min-h-screen flex flex-col bg-background text-charcoal font-sans antialiased selection:bg-rose-blush selection:text-charcoal">
-  <!-- Navigation Header with Glassmorphism -->
-  <header class="glass-header sticky top-0 z-50 transition-all duration-200">
+<div class="min-h-screen flex flex-col bg-[#181419] text-[#EDE4E7] font-sans antialiased selection:bg-[#E0A96D] selection:text-[#181419]">
+  <!-- Navigation Header with Glassmorphism & Soft Muted Rose Border -->
+  <header class="glass-header sticky top-0 z-50 transition-all duration-200 border-b border-[#3A2E39]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         <!-- Brand / Logo with Playfair Display -->
         <a routerLink="/home" class="flex items-center gap-3.5 group">
-          <div class="w-11 h-11 rounded-2xl bg-rose-blush border border-rose-blush/80 flex items-center justify-center text-charcoal font-serif font-bold text-xl shadow-sm group-hover:scale-105 group-hover:shadow-md transition-all duration-200">
-            R
+          <div class="relative w-11 h-11 rounded-full overflow-hidden border-2 border-[#E0A96D] shadow-md shadow-[#E0A96D]/20 group-hover:scale-105 transition-all duration-200 shrink-0">
+            <img
+              src="assets/profile.jpg"
+              alt="Riya Jha"
+              class="w-full h-full object-cover object-top"
+            />
           </div>
           <div class="flex flex-col">
-            <span class="font-serif font-bold text-lg tracking-tight text-charcoal group-hover:text-taupe transition-colors">
+            <span class="font-serif font-bold text-lg tracking-tight text-[#FAF5F7] group-hover:text-[#E0A96D] transition-colors">
               Riya Jha
             </span>
-            <span class="text-xs text-taupe font-sans tracking-wide">
+            <span class="text-xs text-[#A3929C] font-sans tracking-wide">
               Software Developer &amp; AI Engineer
             </span>
           </div>
         </a>
 
         <!-- Desktop Navigation Links -->
-        <nav class="hidden md:flex items-center gap-1.5 p-1.5 rounded-2xl glass-pill">
+        <nav class="hidden md:flex items-center gap-1.5 p-1.5 rounded-2xl glass-pill border border-[#3A2E39]">
           <a
             routerLink="/home"
-            routerLinkActive="bg-rose-blush text-charcoal font-semibold shadow-xs"
+            routerLinkActive="bg-[#E0A96D] text-[#181419] font-bold shadow-md shadow-[#E0A96D]/20"
             [routerLinkActiveOptions]="{ exact: true }"
-            class="px-4 py-2 rounded-xl text-sm font-medium text-taupe hover:text-charcoal hover:bg-rose-blush/40 transition-all duration-150"
+            class="px-4 py-2 rounded-xl text-sm font-medium text-[#C7B8BF] hover:text-[#FAF5F7] hover:bg-[#3A2E39]/60 transition-all duration-150"
           >
             Home
           </a>
           <a
             routerLink="/experience"
-            routerLinkActive="bg-rose-blush text-charcoal font-semibold shadow-xs"
-            class="px-4 py-2 rounded-xl text-sm font-medium text-taupe hover:text-charcoal hover:bg-rose-blush/40 transition-all duration-150"
+            routerLinkActive="bg-[#E0A96D] text-[#181419] font-bold shadow-md shadow-[#E0A96D]/20"
+            class="px-4 py-2 rounded-xl text-sm font-medium text-[#C7B8BF] hover:text-[#FAF5F7] hover:bg-[#3A2E39]/60 transition-all duration-150"
           >
             Experience
           </a>
           <a
             routerLink="/gallery"
-            routerLinkActive="bg-rose-blush text-charcoal font-semibold shadow-xs"
-            class="px-4 py-2 rounded-xl text-sm font-medium text-taupe hover:text-charcoal hover:bg-rose-blush/40 transition-all duration-150"
+            routerLinkActive="bg-[#E0A96D] text-[#181419] font-bold shadow-md shadow-[#E0A96D]/20"
+            class="px-4 py-2 rounded-xl text-sm font-medium text-[#C7B8BF] hover:text-[#FAF5F7] hover:bg-[#3A2E39]/60 transition-all duration-150"
           >
             Gallery
           </a>
           <a
             routerLink="/projects"
-            routerLinkActive="bg-rose-blush text-charcoal font-semibold shadow-xs"
-            class="px-4 py-2 rounded-xl text-sm font-medium text-taupe hover:text-charcoal hover:bg-rose-blush/40 transition-all duration-150"
+            routerLinkActive="bg-[#E0A96D] text-[#181419] font-bold shadow-md shadow-[#E0A96D]/20"
+            class="px-4 py-2 rounded-xl text-sm font-medium text-[#C7B8BF] hover:text-[#FAF5F7] hover:bg-[#3A2E39]/60 transition-all duration-150"
           >
             Projects
           </a>
           <a
             routerLink="/contact"
-            routerLinkActive="bg-rose-blush text-charcoal font-semibold shadow-xs"
-            class="px-4 py-2 rounded-xl text-sm font-medium text-taupe hover:text-charcoal hover:bg-rose-blush/40 transition-all duration-150"
+            routerLinkActive="bg-[#E0A96D] text-[#181419] font-bold shadow-md shadow-[#E0A96D]/20"
+            class="px-4 py-2 rounded-xl text-sm font-medium text-[#C7B8BF] hover:text-[#FAF5F7] hover:bg-[#3A2E39]/60 transition-all duration-150"
           >
             Contact
           </a>
         </nav>
 
-        <!-- CTA & Resume Button -->
-        <div class="hidden md:flex items-center gap-3">
+        <!-- CTA & Resume Action Buttons -->
+        <div class="hidden lg:flex items-center gap-3">
+          <!-- View Resume standard HTML link -->
           <a
             href="assets/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            class="px-4 py-2 text-xs font-semibold uppercase tracking-wider text-charcoal border border-rose-blush rounded-xl hover:bg-rose-blush/30 transition-all duration-200"
+            class="px-3.5 py-2 text-xs font-semibold uppercase tracking-wider text-[#FAF5F7] border border-[#3A2E39] hover:border-[#E0A96D] hover:bg-[#E0A96D]/10 rounded-xl transition-all duration-200"
           >
-            Resume
+            View Resume
           </a>
+
+          <!-- Download CV standard HTML link -->
+          <a
+            href="assets/resume.pdf"
+            download="My_Resume.pdf"
+            class="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-bold uppercase tracking-wider text-[#181419] bg-gradient-to-r from-[#E0A96D] to-[#F43F5E] hover:opacity-95 rounded-xl shadow-md shadow-[#E0A96D]/20 transition-all duration-200"
+          >
+            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            Download CV
+          </a>
+
           <a
             routerLink="/contact"
-            class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium rounded-xl text-charcoal bg-rose-blush hover:bg-[#dfb4b8] shadow-sm hover:shadow-md transition-all duration-200"
+            class="inline-flex items-center justify-center px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-xl text-[#FAF5F7] bg-[#2A202C] hover:bg-[#3A2E39] border border-[#3A2E39] transition-all duration-200"
           >
-            Get In Touch
+            Contact
           </a>
         </div>
 
         <!-- Mobile Menu Button -->
-        <div class="md:hidden flex items-center">
+        <div class="lg:hidden flex items-center">
           <button
             type="button"
             (click)="toggleMobileMenu()"
-            class="p-2.5 rounded-xl text-taupe hover:text-charcoal hover:bg-rose-blush/30 focus:outline-none transition-colors"
+            class="p-2.5 rounded-xl text-[#C7B8BF] hover:text-[#FAF5F7] hover:bg-[#2A202C] border border-[#3A2E39] focus:outline-none transition-colors"
             aria-label="Toggle navigation menu"
           >
             @if (!isMobileMenuOpen()) {
@@ -100,62 +118,65 @@
 
     <!-- Mobile Dropdown Navigation -->
     @if (isMobileMenuOpen()) {
-      <div class="md:hidden border-t border-rose-blush/40 bg-[#FDF8F7]/95 backdrop-blur-md px-4 pt-3 pb-5 space-y-1.5 shadow-lg">
+      <div class="lg:hidden border-t border-[#3A2E39] bg-[#181419]/98 backdrop-blur-xl px-4 pt-4 pb-6 space-y-2 shadow-2xl">
         <a
           routerLink="/home"
           (click)="closeMobileMenu()"
-          routerLinkActive="bg-rose-blush text-charcoal font-semibold"
+          routerLinkActive="bg-[#E0A96D] text-[#181419] font-bold"
           [routerLinkActiveOptions]="{ exact: true }"
-          class="block px-3 py-2.5 rounded-xl text-base text-taupe hover:text-charcoal hover:bg-rose-blush/30 transition-colors"
+          class="block px-4 py-2.5 rounded-xl text-base text-[#C7B8BF] hover:text-[#FAF5F7] hover:bg-[#2A202C] transition-colors"
         >
           Home
         </a>
         <a
           routerLink="/experience"
           (click)="closeMobileMenu()"
-          routerLinkActive="bg-rose-blush text-charcoal font-semibold"
-          class="block px-3 py-2.5 rounded-xl text-base text-taupe hover:text-charcoal hover:bg-rose-blush/30 transition-colors"
+          routerLinkActive="bg-[#E0A96D] text-[#181419] font-bold"
+          class="block px-4 py-2.5 rounded-xl text-base text-[#C7B8BF] hover:text-[#FAF5F7] hover:bg-[#2A202C] transition-colors"
         >
           Experience
         </a>
         <a
           routerLink="/gallery"
           (click)="closeMobileMenu()"
-          routerLinkActive="bg-rose-blush text-charcoal font-semibold"
-          class="block px-3 py-2.5 rounded-xl text-base text-taupe hover:text-charcoal hover:bg-rose-blush/30 transition-colors"
+          routerLinkActive="bg-[#E0A96D] text-[#181419] font-bold"
+          class="block px-4 py-2.5 rounded-xl text-base text-[#C7B8BF] hover:text-[#FAF5F7] hover:bg-[#2A202C] transition-colors"
         >
           Gallery
         </a>
         <a
           routerLink="/projects"
           (click)="closeMobileMenu()"
-          routerLinkActive="bg-rose-blush text-charcoal font-semibold"
-          class="block px-3 py-2.5 rounded-xl text-base text-taupe hover:text-charcoal hover:bg-rose-blush/30 transition-colors"
+          routerLinkActive="bg-[#E0A96D] text-[#181419] font-bold"
+          class="block px-4 py-2.5 rounded-xl text-base text-[#C7B8BF] hover:text-[#FAF5F7] hover:bg-[#2A202C] transition-colors"
         >
           Projects
         </a>
         <a
           routerLink="/contact"
           (click)="closeMobileMenu()"
-          routerLinkActive="bg-rose-blush text-charcoal font-semibold"
-          class="block px-3 py-2.5 rounded-xl text-base text-taupe hover:text-charcoal hover:bg-rose-blush/30 transition-colors"
+          routerLinkActive="bg-[#E0A96D] text-[#181419] font-bold"
+          class="block px-4 py-2.5 rounded-xl text-base text-[#C7B8BF] hover:text-[#FAF5F7] hover:bg-[#2A202C] transition-colors"
         >
           Contact
         </a>
-        <div class="pt-2 border-t border-rose-blush/30 flex items-center gap-3">
+
+        <!-- Mobile Resume Actions -->
+        <div class="pt-3 border-t border-[#3A2E39] grid grid-cols-2 gap-3">
           <a
             href="assets/resume.pdf"
             target="_blank"
-            class="flex-1 text-center py-2 text-sm font-semibold rounded-xl border border-rose-blush text-charcoal"
+            rel="noopener noreferrer"
+            class="text-center py-2.5 text-xs font-semibold uppercase tracking-wider rounded-xl border border-[#3A2E39] text-[#FAF5F7] hover:bg-[#2A202C]"
           >
-            Resume
+            View Resume
           </a>
           <a
-            routerLink="/contact"
-            (click)="closeMobileMenu()"
-            class="flex-1 text-center py-2 text-sm font-semibold rounded-xl bg-rose-blush text-charcoal"
+            href="assets/resume.pdf"
+            download="My_Resume.pdf"
+            class="text-center py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl bg-gradient-to-r from-[#E0A96D] to-[#F43F5E] text-[#181419] shadow-md"
           >
-            Get In Touch
+            Download CV
           </a>
         </div>
       </div>
@@ -167,28 +188,29 @@
     <router-outlet />
   </main>
 
-  <!-- Footer with Warm Taupe & Blush styling -->
-  <footer class="glass-container border-t border-rose-blush/40 py-10 mt-16">
+  <!-- Footer with Dark Plum & Glowing Rose-Gold styling -->
+  <footer class="glass-container border-t border-[#3A2E39] py-10 mt-16 bg-[#141015]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
       <div class="flex items-center gap-3">
-        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 ring-4 ring-emerald-500/20"></span>
-        <span class="text-sm text-taupe font-medium">Available for Software &amp; AI Engineering Opportunities</span>
+        <span class="w-2.5 h-2.5 rounded-full bg-[#E0A96D] ring-4 ring-[#E0A96D]/20 animate-pulse"></span>
+        <span class="text-sm text-[#C7B8BF] font-medium">Available for Software &amp; AI Engineering Opportunities</span>
       </div>
 
       <div class="text-center md:text-right">
-        <p class="text-sm font-serif font-semibold text-charcoal">
+        <p class="text-sm font-serif font-semibold text-[#FAF5F7]">
           Riya Jha &bull; Portfolio
         </p>
-        <p class="text-xs text-taupe mt-0.5">
-          Designed with Playfair Display, Inter &amp; Tailwind CSS
+        <p class="text-xs text-[#A3929C] mt-0.5">
+          Crafted with Playfair Display, Inter &amp; Tailwind CSS
         </p>
       </div>
 
-      <div class="flex items-center gap-5 text-sm text-taupe font-medium">
-        <a routerLink="/home" class="hover:text-charcoal transition-colors">Home</a>
-        <a routerLink="/experience" class="hover:text-charcoal transition-colors">Experience</a>
-        <a routerLink="/projects" class="hover:text-charcoal transition-colors">Projects</a>
-        <a routerLink="/contact" class="hover:text-charcoal transition-colors">Contact</a>
+      <div class="flex items-center gap-5 text-sm text-[#C7B8BF] font-medium">
+        <a routerLink="/home" class="hover:text-[#E0A96D] transition-colors">Home</a>
+        <a routerLink="/experience" class="hover:text-[#E0A96D] transition-colors">Experience</a>
+        <a routerLink="/gallery" class="hover:text-[#E0A96D] transition-colors">Gallery</a>
+        <a routerLink="/projects" class="hover:text-[#E0A96D] transition-colors">Projects</a>
+        <a routerLink="/contact" class="hover:text-[#E0A96D] transition-colors">Contact</a>
       </div>
     </div>
   </footer>

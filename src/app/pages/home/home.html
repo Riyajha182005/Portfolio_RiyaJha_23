@@ -1,47 +1,76 @@
 <div class="relative overflow-hidden">
-  <!-- Subtle ambient glow background accents matching theme palette -->
-  <div class="absolute top-12 left-1/2 -translate-x-1/2 w-[720px] h-[380px] bg-gradient-to-tr from-rose-blush/40 via-taupe/15 to-transparent blur-3xl pointer-events-none -z-10 rounded-full"></div>
+  <!-- Subtle ambient glow background accents in deep plum and rose-gold -->
+  <div class="absolute top-10 left-1/2 -translate-x-1/2 w-[720px] h-[360px] bg-gradient-to-tr from-[#E0A96D]/15 via-[#F43F5E]/10 to-transparent blur-3xl pointer-events-none -z-10 rounded-full"></div>
 
   <!-- Hero Section -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-14 lg:pt-24 lg:pb-20">
     <div class="text-center max-w-3xl mx-auto">
+      <!-- Profile Portrait with Glowing Rose-Gold Aura -->
+      <div class="relative inline-block mx-auto mb-6 group">
+        <div class="absolute -inset-2 bg-gradient-to-r from-[#E0A96D] via-[#F43F5E] to-[#E0A96D] rounded-full blur-xl opacity-60 group-hover:opacity-90 transition duration-700"></div>
+        <div class="relative w-36 h-36 sm:w-44 sm:h-44 rounded-full overflow-hidden border-2 border-[#E0A96D] shadow-2xl bg-[#181419]">
+          <img
+            [src]="data.personal.profileImage"
+            [alt]="data.personal.name"
+            class="w-full h-full object-cover object-top scale-105 group-hover:scale-110 transition-transform duration-700"
+          />
+        </div>
+        <div class="absolute bottom-1 right-1.5 px-3 py-1 rounded-full bg-[#181419]/95 border border-[#3A2E39] shadow-lg flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span class="text-[11px] font-semibold text-[#EDE4E7]">Available</span>
+        </div>
+      </div>
+
       <!-- Badge Pill -->
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-pill text-xs font-medium text-taupe mb-8">
-        <span class="w-2 h-2 rounded-full bg-rose-blush border border-taupe/40 animate-pulse"></span>
-        <span class="tracking-wide">Information Technology &bull; GGSIPU (GPA: 9.24/10)</span>
+      <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full glass-pill border border-[#3A2E39] text-xs font-semibold text-[#E0A96D] mb-8">
+        <span class="w-2 h-2 rounded-full bg-[#E0A96D] animate-ping"></span>
+        <span class="tracking-wide">Information Technology &bull; GGSIPU &bull; GPA: 9.24/10</span>
       </div>
 
       <!-- Playfair Display Heading -->
-      <h1 class="text-4xl sm:text-6xl font-serif font-bold text-charcoal mb-6 leading-[1.15] tracking-tight">
-        Engineering solutions with <span class="italic font-normal text-taupe">Generative AI</span> &amp; enterprise software
+      <h1 class="text-4xl sm:text-6xl font-serif font-bold text-[#FAF5F7] mb-6 leading-[1.15] tracking-tight">
+        Engineering solutions with <span class="italic font-normal bg-gradient-to-r from-[#E0A96D] to-[#F43F5E] bg-clip-text text-transparent">Generative AI</span> &amp; enterprise systems
       </h1>
 
       <!-- Bio / Summary -->
-      <p class="text-base sm:text-lg text-taupe font-sans max-w-2xl mx-auto mb-10 leading-relaxed">
+      <p class="text-base sm:text-lg text-[#C7B8BF] font-sans max-w-2xl mx-auto mb-10 leading-relaxed">
         {{ data.personal.bio }}
       </p>
 
-      <!-- Action Buttons -->
+      <!-- Action Buttons with Download CV and View Resume standard HTML links -->
       <div class="flex flex-wrap items-center justify-center gap-4">
+        <!-- Download CV Button -->
         <a
-          routerLink="/projects"
-          class="px-6 py-3 rounded-xl bg-charcoal text-[#FDF8F7] hover:bg-taupe font-medium shadow-md card-lift-sm transition-all duration-200"
+          href="assets/resume.pdf"
+          download="My_Resume.pdf"
+          class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-[#E0A96D] to-[#F43F5E] text-[#181419] font-bold shadow-lg shadow-[#E0A96D]/20 card-lift-sm transition-all duration-200 cursor-pointer"
         >
-          View Projects
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+          </svg>
+          Download CV
         </a>
-        <a
-          routerLink="/experience"
-          class="px-6 py-3 rounded-xl glass-card text-charcoal hover:bg-rose-blush/30 font-medium card-lift-sm transition-all duration-200"
-        >
-          Work Experience
-        </a>
+
+        <!-- View Resume Button -->
         <a
           href="assets/resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          class="px-6 py-3 rounded-xl bg-rose-blush text-charcoal hover:bg-[#dfb4b8] font-medium shadow-xs card-lift-sm transition-all duration-200"
+          class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl glass-card text-[#FAF5F7] border border-[#3A2E39] hover:border-[#E0A96D] hover:bg-[#E0A96D]/15 font-semibold card-lift-sm transition-all duration-200 cursor-pointer"
         >
-          Download Resume &darr;
+          <svg class="w-4 h-4 text-[#E0A96D]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+          </svg>
+          View Resume
+        </a>
+
+        <!-- Explore Projects Button -->
+        <a
+          routerLink="/projects"
+          class="inline-flex items-center gap-1.5 px-6 py-3.5 rounded-xl bg-[#261F29] border border-[#3A2E39] hover:border-[#E0A96D]/60 text-[#EDE4E7] font-medium card-lift-sm transition-all duration-200"
+        >
+          Projects &rarr;
         </a>
       </div>
     </div>
@@ -49,42 +78,42 @@
     <!-- Quick Stats Grid with Glassmorphism & Card Lift -->
     <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-5xl mx-auto">
       @for (stat of stats; track stat.label) {
-        <div class="p-6 rounded-2xl glass-card card-lift text-center">
-          <div class="text-3xl sm:text-4xl font-serif font-bold text-charcoal mb-1">
+        <div class="p-6 rounded-2xl glass-card card-lift border border-[#3A2E39] text-center">
+          <div class="text-3xl sm:text-4xl font-serif font-bold bg-gradient-to-r from-[#FAF5F7] to-[#E0A96D] bg-clip-text text-transparent mb-1">
             {{ stat.value }}
           </div>
-          <div class="text-xs sm:text-sm text-taupe font-sans">{{ stat.label }}</div>
+          <div class="text-xs sm:text-sm text-[#C7B8BF] font-sans">{{ stat.label }}</div>
         </div>
       }
     </div>
   </section>
 
   <!-- Technical Skills Overview Section -->
-  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-rose-blush/30">
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-[#3A2E39]">
     <div class="text-center mb-12">
-      <div class="inline-block px-3 py-1 rounded-full bg-rose-blush/30 text-taupe text-xs font-semibold uppercase tracking-wider mb-3">
+      <div class="inline-block px-3.5 py-1 rounded-full bg-[#E0A96D]/15 border border-[#E0A96D]/30 text-[#E0A96D] text-xs font-semibold uppercase tracking-wider mb-3">
         Skill Set
       </div>
-      <h2 class="text-3xl sm:text-4xl font-serif font-bold text-charcoal mb-3">
+      <h2 class="text-3xl sm:text-4xl font-serif font-bold text-[#FAF5F7] mb-3">
         Technical Expertise
       </h2>
-      <p class="text-taupe max-w-lg mx-auto text-sm sm:text-base font-sans">
+      <p class="text-[#C7B8BF] max-w-lg mx-auto text-sm sm:text-base font-sans">
         Proficiencies spanning modern full-stack web, machine learning, and AI agent frameworks.
       </p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       @for (category of data.skillCategories; track category.category) {
-        <div class="p-6 rounded-2xl glass-card card-lift flex flex-col justify-between">
+        <div class="p-6 rounded-2xl glass-card card-lift border border-[#3A2E39] flex flex-col justify-between">
           <div>
-            <h3 class="text-lg font-serif font-bold text-charcoal mb-4 flex items-center justify-between">
+            <h3 class="text-lg font-serif font-bold text-[#FAF5F7] mb-4 flex items-center justify-between">
               <span>{{ category.category }}</span>
-              <span class="w-2 h-2 rounded-full bg-rose-blush"></span>
+              <span class="w-2 h-2 rounded-full bg-[#E0A96D]"></span>
             </h3>
 
             <div class="flex flex-wrap gap-2">
               @for (skill of category.skills; track skill) {
-                <span class="px-3 py-1 rounded-lg bg-rose-blush/25 border border-rose-blush/40 text-charcoal text-xs font-medium">
+                <span class="px-3 py-1 rounded-lg bg-[#2A202C] border border-[#3A2E39] text-[#EDE4E7] text-xs font-medium">
                   {{ skill }}
                 </span>
               }
@@ -98,39 +127,39 @@
   <!-- Featured Highlights Banner with Glassmorphism -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <a routerLink="/experience" class="p-8 rounded-3xl glass-card card-lift group block">
-        <div class="w-12 h-12 rounded-2xl bg-rose-blush/60 text-charcoal flex items-center justify-center font-bold text-xl mb-4 group-hover:scale-110 transition-transform">
+      <a routerLink="/experience" class="p-8 rounded-3xl glass-card card-lift border border-[#3A2E39] group block">
+        <div class="w-12 h-12 rounded-2xl bg-[#E0A96D]/15 border border-[#E0A96D]/30 text-[#E0A96D] flex items-center justify-center font-bold text-xl mb-4 group-hover:scale-110 transition-transform">
           🏛️
         </div>
-        <h3 class="text-xl font-serif font-bold text-charcoal mb-2 group-hover:text-taupe transition-colors">
+        <h3 class="text-xl font-serif font-bold text-[#FAF5F7] mb-2 group-hover:text-[#E0A96D] transition-colors">
           Internships &amp; Research
         </h3>
-        <p class="text-sm text-taupe leading-relaxed">
+        <p class="text-sm text-[#C7B8BF] leading-relaxed">
           Pneumax Pneumatics (SE Intern), DRDO - SSPL (Research Intern), and IGDTUW (Gen AI Intern).
         </p>
       </a>
 
-      <a routerLink="/projects" class="p-8 rounded-3xl glass-card card-lift group block">
-        <div class="w-12 h-12 rounded-2xl bg-rose-blush/60 text-charcoal flex items-center justify-center font-bold text-xl mb-4 group-hover:scale-110 transition-transform">
+      <a routerLink="/projects" class="p-8 rounded-3xl glass-card card-lift border border-[#3A2E39] group block">
+        <div class="w-12 h-12 rounded-2xl bg-[#E0A96D]/15 border border-[#E0A96D]/30 text-[#E0A96D] flex items-center justify-center font-bold text-xl mb-4 group-hover:scale-110 transition-transform">
           🤖
         </div>
-        <h3 class="text-xl font-serif font-bold text-charcoal mb-2 group-hover:text-taupe transition-colors">
+        <h3 class="text-xl font-serif font-bold text-[#FAF5F7] mb-2 group-hover:text-[#E0A96D] transition-colors">
           Featured AI Projects
         </h3>
-        <p class="text-sm text-taupe leading-relaxed">
+        <p class="text-sm text-[#C7B8BF] leading-relaxed">
           AI Scholarship Alert Chatbot (n8n &amp; Telegram), RAG + LangGraph Calculator Agent, and Computer Vision Cloak.
         </p>
       </a>
 
-      <a routerLink="/gallery" class="p-8 rounded-3xl glass-card card-lift group block">
-        <div class="w-12 h-12 rounded-2xl bg-rose-blush/60 text-charcoal flex items-center justify-center font-bold text-xl mb-4 group-hover:scale-110 transition-transform">
-          ✨
+      <a routerLink="/gallery" class="p-8 rounded-3xl glass-card card-lift border border-[#3A2E39] group block">
+        <div class="w-12 h-12 rounded-2xl bg-[#E0A96D]/15 border border-[#E0A96D]/30 text-[#E0A96D] flex items-center justify-center font-bold text-xl mb-4 group-hover:scale-110 transition-transform">
+          📸
         </div>
-        <h3 class="text-xl font-serif font-bold text-charcoal mb-2 group-hover:text-taupe transition-colors">
-          Interactive Gallery
+        <h3 class="text-xl font-serif font-bold text-[#FAF5F7] mb-2 group-hover:text-[#E0A96D] transition-colors">
+          Internship &amp; Events Gallery
         </h3>
-        <p class="text-sm text-taupe leading-relaxed">
-          Explore design concepts, system workflow diagrams, agent flows, and visual architecture experiments.
+        <p class="text-sm text-[#C7B8BF] leading-relaxed">
+          Explore interactive photo documentary of engineering internships, GDG summits, Azure events, and technical hackathons.
         </p>
       </a>
     </div>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#161217"/>
+      <stop offset="50%" stop-color="#241B26"/>
+      <stop offset="100%" stop-color="#110D12"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg6)"/>
+
+  <g transform="translate(180, 80)">
+    <rect width="440" height="250" rx="16" fill="#181419" stroke="#3A2E39" stroke-width="2"/>
+    <rect width="440" height="40" rx="16" fill="#241B26"/>
+    <text x="25" y="25" font-family="Inter, sans-serif" font-size="12" fill="#E0A96D" font-weight="bold">Workspace &bull; LangGraph &amp; FAISS Code Sprint</text>
+
+    <!-- Code Editor Mockup -->
+    <rect x="30" y="55" width="380" height="175" rx="10" fill="#1B141C" stroke="#3A2E39"/>
+    <text x="50" y="80" font-family="'Courier New', monospace" font-size="11" fill="#F43F5E">from langgraph.graph import StateGraph, END</text>
+    <text x="50" y="100" font-family="'Courier New', monospace" font-size="11" fill="#E0A96D">workflow = StateGraph(AgentState)</text>
+    <text x="50" y="120" font-family="'Courier New', monospace" font-size="11" fill="#EDE4E7">workflow.add_node("faiss_retriever", retrieve_docs)</text>
+    <text x="50" y="140" font-family="'Courier New', monospace" font-size="11" fill="#EDE4E7">workflow.add_node("claude_calculator", run_calc_agent)</text>
+    <text x="50" y="165" font-family="'Courier New', monospace" font-size="11" fill="#A3929C"># Live pairing session: latency reduced to 180ms</text>
+    <text x="50" y="195" font-family="Inter, sans-serif" font-size="10" fill="#E0A96D">&bull; Test suite: 14 passing &bull; Memory cache hit: 94%</text>
+  </g>
+
+  <text x="400" y="390" font-family="'Playfair Display', serif" font-size="24" fill="#FAF5F7" font-weight="bold" text-anchor="middle">Agent Engineering Pairing Session</text>
+  <text x="400" y="420" font-family="Inter, sans-serif" font-size="13" fill="#E0A96D" font-weight="500" text-anchor="middle">Work Life &bull; Developer Hub &bull; May 2026</text>
+</svg>
